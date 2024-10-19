@@ -2,4 +2,15 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
+    kotlin("jvm")
+}
+
+dependencies {
+    implementation(kotlin("stdlib-jdk8"))
+}
+
+// No repositories block here since repositories are managed centrally in settings.gradle.kts
+
+kotlin {
+    jvmToolchain(8)
 }
